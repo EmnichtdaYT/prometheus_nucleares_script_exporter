@@ -51,7 +51,7 @@ Requirements: Know how grafana, prometheus and script_exporter work. This isn't 
  1. Set up a grafana, prometheus and script_exporter (I'd recommend you spin up a script_exporter on the same machine the game is running on)
  2. Download node.js on the machine running script_exporter
  3. Download the [nucleares_batch.js](nucleares_batch.js), place it wherever you see fit and make it executable for the user running the script_exporter
- 4. Configure script_exporter (use the example config above as an inspiration) (Windows users: Idfk if you need to modify the config so script_exporter can actually execute the .js script, maybe try adding node.js before? Or create a .cmd script with then uses node to start the .js? Or just use Linux, shebang go brrrrrrr /s )
+ 4. Configure script_exporter (use the example config above as an inspiration) (Windows users: Idfk if you need to modify the config so script_exporter can actually execute the .js script, maybe try adding node.exe before? Or create a .cmd script with then uses node to start the .js? Or just use Linux, shebang go brrrrrrr /s )
  5. Start the script_exporter
  6. Start the game and use the tablet to start the webserver (Status, Start webserver) (Leave the default options if the script_exporter is running on the same machine)
  7. Configure a prometheus job to actually scrape the script_exporter (use the example config above as an inspiration)
