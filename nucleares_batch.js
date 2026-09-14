@@ -152,7 +152,7 @@ function print_metric(metric_name, value) {
     } else if (metric_name == "ALARMS_ACTIVE") {
 
         let alarms_total_count = value.split(",").length; // total amount of currently active alarms
-        let alarm_active_formatted = '\"' + value.replaceAll(" ", "_").replaceAll(",", '\"=\"1\",') + '\"=\"1\"';
+        let alarm_active_formatted = '\"' + value.replaceAll(" ", "_").replaceAll(",", '\"=\"1\",\"') + '\"=\"1\"';
 
         console.log(
             `ALARMS_ACTIVE{${alarm_active_formatted}} ${alarms_total_count}`,
